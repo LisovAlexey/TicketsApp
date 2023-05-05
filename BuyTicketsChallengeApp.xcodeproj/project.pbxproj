@@ -14,6 +14,8 @@
 		8A910C652A05125E002E36D7 /* BuyTicketsChallengeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A910C642A05125E002E36D7 /* BuyTicketsChallengeAppTests.swift */; };
 		8A910C6F2A05125E002E36D7 /* BuyTicketsChallengeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A910C6E2A05125E002E36D7 /* BuyTicketsChallengeAppUITests.swift */; };
 		8A910C712A05125E002E36D7 /* BuyTicketsChallengeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A910C702A05125E002E36D7 /* BuyTicketsChallengeAppUITestsLaunchTests.swift */; };
+		8A910C7E2A0512F5002E36D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8A910C7D2A0512F4002E36D7 /* README.md */; };
+		8A910C812A051369002E36D7 /* EventsList.postman_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A910C802A051369002E36D7 /* EventsList.postman_collection.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		8A910C6A2A05125E002E36D7 /* BuyTicketsChallengeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuyTicketsChallengeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A910C6E2A05125E002E36D7 /* BuyTicketsChallengeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketsChallengeAppUITests.swift; sourceTree = "<group>"; };
 		8A910C702A05125E002E36D7 /* BuyTicketsChallengeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketsChallengeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8A910C7D2A0512F4002E36D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8A910C802A051369002E36D7 /* EventsList.postman_collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EventsList.postman_collection.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		8A910C472A05125D002E36D7 = {
 			isa = PBXGroup;
 			children = (
+				8A910C7D2A0512F4002E36D7 /* README.md */,
 				8A910C522A05125D002E36D7 /* BuyTicketsChallengeApp */,
 				8A910C632A05125E002E36D7 /* BuyTicketsChallengeAppTests */,
 				8A910C6D2A05125E002E36D7 /* BuyTicketsChallengeAppUITests */,
@@ -97,6 +102,7 @@
 				8A910C532A05125D002E36D7 /* BuyTicketsChallengeAppApp.swift */,
 				8A910C552A05125D002E36D7 /* ContentView.swift */,
 				8A910C572A05125E002E36D7 /* Assets.xcassets */,
+				8A910C7F2A051369002E36D7 /* data */,
 				8A910C592A05125E002E36D7 /* Preview Content */,
 			);
 			path = BuyTicketsChallengeApp;
@@ -126,6 +132,14 @@
 			);
 			path = BuyTicketsChallengeAppUITests;
 			sourceTree = "<group>";
+		};
+		8A910C7F2A051369002E36D7 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				8A910C802A051369002E36D7 /* EventsList.postman_collection.json */,
+			);
+			path = data;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -231,7 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A910C7E2A0512F5002E36D7 /* README.md in Resources */,
 				8A910C5B2A05125E002E36D7 /* Preview Assets.xcassets in Resources */,
+				8A910C812A051369002E36D7 /* EventsList.postman_collection.json in Resources */,
 				8A910C582A05125E002E36D7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
