@@ -23,6 +23,11 @@ struct Event {
 
 
 struct EventPreview {
+    
+    static var mock: EventPreview =
+    EventPreview(title: "Concert in hell",
+                 date: Date.init(timeIntervalSince1970: 1_693_968_000),
+                 price: 25.5)
 
     var id: UUID?
     

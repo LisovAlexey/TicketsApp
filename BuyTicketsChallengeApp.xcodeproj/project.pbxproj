@@ -19,6 +19,7 @@
 		8A910C832A051497002E36D7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A910C822A051497002E36D7 /* Coordinator.swift */; };
 		8A910C852A0515B5002E36D7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A910C842A0515B5002E36D7 /* Model.swift */; };
 		8A910C872A051926002E36D7 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A910C862A051926002E36D7 /* MockData.json */; };
+		8A95DE3F2A07C9B3004B28C3 /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE3E2A07C9B3004B28C3 /* EventRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		8A910C822A051497002E36D7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8A910C842A0515B5002E36D7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8A910C862A051926002E36D7 /* MockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
+		8A95DE3E2A07C9B3004B28C3 /* EventRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		8A910C522A05125D002E36D7 /* BuyTicketsChallengeApp */ = {
 			isa = PBXGroup;
 			children = (
+				8A95DE3D2A07C990004B28C3 /* Views */,
 				8A910C842A0515B5002E36D7 /* Model.swift */,
 				8A910C532A05125D002E36D7 /* BuyTicketsChallengeAppApp.swift */,
 				8A910C552A05125D002E36D7 /* ContentView.swift */,
@@ -149,6 +152,14 @@
 			);
 			path = data;
 			sourceTree = SOURCE_ROOT;
+		};
+		8A95DE3D2A07C990004B28C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8A95DE3E2A07C9B3004B28C3 /* EventRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -287,6 +298,7 @@
 				8A910C542A05125D002E36D7 /* BuyTicketsChallengeAppApp.swift in Sources */,
 				8A910C832A051497002E36D7 /* Coordinator.swift in Sources */,
 				8A910C852A0515B5002E36D7 /* Model.swift in Sources */,
+				8A95DE3F2A07C9B3004B28C3 /* EventRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
