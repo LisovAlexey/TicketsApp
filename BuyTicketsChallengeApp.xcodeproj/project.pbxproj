@@ -16,6 +16,9 @@
 		8A910C712A05125E002E36D7 /* BuyTicketsChallengeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A910C702A05125E002E36D7 /* BuyTicketsChallengeAppUITestsLaunchTests.swift */; };
 		8A910C7E2A0512F5002E36D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8A910C7D2A0512F4002E36D7 /* README.md */; };
 		8A910C812A051369002E36D7 /* EventsList.postman_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A910C802A051369002E36D7 /* EventsList.postman_collection.json */; };
+		8A910C832A051497002E36D7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A910C822A051497002E36D7 /* Coordinator.swift */; };
+		8A910C852A0515B5002E36D7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A910C842A0515B5002E36D7 /* Model.swift */; };
+		8A910C872A051926002E36D7 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A910C862A051926002E36D7 /* MockData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		8A910C702A05125E002E36D7 /* BuyTicketsChallengeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketsChallengeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8A910C7D2A0512F4002E36D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8A910C802A051369002E36D7 /* EventsList.postman_collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EventsList.postman_collection.json; sourceTree = "<group>"; };
+		8A910C822A051497002E36D7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8A910C842A0515B5002E36D7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8A910C862A051926002E36D7 /* MockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 		8A910C472A05125D002E36D7 = {
 			isa = PBXGroup;
 			children = (
+				8A910C862A051926002E36D7 /* MockData.json */,
 				8A910C7D2A0512F4002E36D7 /* README.md */,
 				8A910C522A05125D002E36D7 /* BuyTicketsChallengeApp */,
 				8A910C632A05125E002E36D7 /* BuyTicketsChallengeAppTests */,
@@ -99,11 +106,13 @@
 		8A910C522A05125D002E36D7 /* BuyTicketsChallengeApp */ = {
 			isa = PBXGroup;
 			children = (
+				8A910C842A0515B5002E36D7 /* Model.swift */,
 				8A910C532A05125D002E36D7 /* BuyTicketsChallengeAppApp.swift */,
 				8A910C552A05125D002E36D7 /* ContentView.swift */,
 				8A910C572A05125E002E36D7 /* Assets.xcassets */,
 				8A910C7F2A051369002E36D7 /* data */,
 				8A910C592A05125E002E36D7 /* Preview Content */,
+				8A910C822A051497002E36D7 /* Coordinator.swift */,
 			);
 			path = BuyTicketsChallengeApp;
 			sourceTree = "<group>";
@@ -249,6 +258,7 @@
 				8A910C5B2A05125E002E36D7 /* Preview Assets.xcassets in Resources */,
 				8A910C812A051369002E36D7 /* EventsList.postman_collection.json in Resources */,
 				8A910C582A05125E002E36D7 /* Assets.xcassets in Resources */,
+				8A910C872A051926002E36D7 /* MockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +285,8 @@
 			files = (
 				8A910C562A05125D002E36D7 /* ContentView.swift in Sources */,
 				8A910C542A05125D002E36D7 /* BuyTicketsChallengeAppApp.swift in Sources */,
+				8A910C832A051497002E36D7 /* Coordinator.swift in Sources */,
+				8A910C852A0515B5002E36D7 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
