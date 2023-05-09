@@ -11,7 +11,7 @@ import SwiftUI
 struct BuyTicketsChallengeAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EventsOverview()
         }
     }
 }

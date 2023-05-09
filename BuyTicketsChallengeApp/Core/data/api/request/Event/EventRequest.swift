@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum EventsRequest: RequestProtocol {
+enum EventsPreviewRequest: RequestProtocol {
+    case getEvents
     
     var path: String {
         "/api/events"

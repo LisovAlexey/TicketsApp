@@ -22,6 +22,10 @@ extension RequestProtocol {
         APIConstants.host
     }
     
+    var port: Int {
+        APIConstants.port
+    }
+    
     var addAuthorizationToken: Bool {
         true
     }
@@ -40,9 +44,10 @@ extension RequestProtocol {
     
     func createURLRequest(authToken: String) throws -> URLRequest {
         var components = URLComponents()
-        components.scheme = "https"
+        components.scheme = "http"
         components.host = host
         components.path = path
+        components.port = port
         
         if !urlParams.isEmpty {
             components.queryItems = urlParams.map { URLQueryItem(name: $0, value: $1) }
