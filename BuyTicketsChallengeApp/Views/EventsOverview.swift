@@ -32,6 +32,33 @@ struct EventsOverview: View {
                 Text(eventPreview.id!.description)
             }
             .navigationTitle("Events list")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                
+                Button {
+                    viewModel.filterPastEvents.toggle()
+                } label: {
+                    Image(systemName: "filter")
+                }
+
+                
+                Menu(content: {
+                    Picker("Sorting by", selection: $viewModel.sorting, content: {
+                        Text("By date").tag(EventsOverviewDataModel.SortingBy.date)
+                        Text("By price").tag(EventsOverviewDataModel.SortingBy.price)
+                    })
+                    
+                    Picker("Sorting order", selection: $viewModel.ascendingSort, content: {
+                        Text("Ascending").tag(true)
+                        Text("Descending").tag(false)
+                    })
+                    
+                    Toggle("Filter past events", isOn: $viewModel.filterPastEvents)
+                }, label: {
+                    Image(systemName: "ellipsis.circle")
+                })
+                .padding(.horizontal, 10)
+            }
         }
         
         
