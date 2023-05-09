@@ -25,9 +25,13 @@ struct EventsOverview: View {
             .onAppear() {
                 viewModel.fetchEventsPreview()
             }
+            .refreshable {
+                viewModel.fetchEventsPreview()
+            }
             .navigationDestination(for: EventPreview.self) { eventPreview in
                 Text(eventPreview.id!.description)
             }
+            .navigationTitle("Events list")
         }
         
         
