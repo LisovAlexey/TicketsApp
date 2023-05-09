@@ -1,0 +1,21 @@
+
+[
+{
+    "id": "9F1A13B2-76F5-4205-A0D4-15A975B53262",
+    "title": "Music Concert",
+    "price": 50.00,
+    "date": "2023-05-10T00:00:00Z"
+},
+{
+    "id": "4A30456D-395A-49E1-A10F-0CCA5A4AFC8C",
+    "title": "Art Exhibition",
+    "price": 5,
+    "date": "2023-05-15T00:00:00Z"
+},
+{
+    "id": "7747AEF4-575E-4CC9-B168-7DB81EFAA119",
+    "title": "Charity Gala",
+    "price": 100,
+    "date": "2023-05-20T00:00:00Z"
+}
+]

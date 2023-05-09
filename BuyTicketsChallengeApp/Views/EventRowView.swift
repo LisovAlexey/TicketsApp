@@ -7,19 +7,19 @@
 
 import SwiftUI
 
+extension DateFormatter {
+    static var defaultDateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        return dateFormatter
+    }
+}
+
 struct EventRowView: View {
     
     var eventPreview: EventPreview
     
-    private let dateFormatter: DateFormatter
-    
-    init(eventPreview: EventPreview) {
-        self.eventPreview = eventPreview
-        
-        self.dateFormatter = DateFormatter()
-        self.dateFormatter.dateFormat = "dd MMMM yyyy"
-    }
-    
+    private let dateFormatter: DateFormatter = DateFormatter.defaultDateFormatter
     
     var body: some View {
         HStack(alignment: .center) {
