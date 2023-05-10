@@ -18,11 +18,11 @@ The idea for the project is pretty simple. It's viewer of events with possibilit
 
 # Design
 There are no special design, but there are some requirements for each screen which data should be shown.
-- Events overview screen should:
++ Events overview screen should:
     + include list of events with title, date and price
     + should contain pull-down to refresh gesture to reload the data
-    - buttons for sorting by date/price
-    - button to filter out outdated events
+    + buttons for sorting by date/price
+    + button to filter out outdated events
 - Event details screen should:
     - contain: title, event description, date of event, address, contact phone, buy button with price on it
     - by tapping on buy button loading indicator should be shown
@@ -47,7 +47,7 @@ Documentation for API could be found in Postman collection in 'docs/EventsList.p
 [+] implement backend communication instead of MOCK samples (see Postman collection for reference)
 [+] fix date formatting on overview page to the following format: "05 August 2021"
 [+] show price value for each event
-[ ] implement sorting by date and by price for overview screen
+[+] implement sorting by date and by price for overview screen
 
 
 ### Code refactoring tasks:
@@ -57,7 +57,7 @@ Documentation for API could be found in Postman collection in 'docs/EventsList.p
 ## Round 2 (Nice to have)
 
 ### Business logic tasks:
-[ ] implement logic of filtering only upcoming events (events which are older than today do not show in the list)
+[+] implement logic of filtering only upcoming events (events which are older than today do not show in the list)
 [ ] implement event details screen
 
 ### Code refactoring tasks:

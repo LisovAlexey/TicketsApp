@@ -40,6 +40,9 @@
 		8A95DE782A0A581C004B28C3 /* EventPreviewMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A95DE742A0A5579004B28C3 /* EventPreviewMock.json */; };
 		8A95DE7A2A0A67A9004B28C3 /* EventsOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE792A0A67A9004B28C3 /* EventsOverview.swift */; };
 		8A95DE7C2A0A67D0004B28C3 /* EventsOverviewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE7B2A0A67D0004B28C3 /* EventsOverviewDataModel.swift */; };
+		8A95DE7E2A0ACFFF004B28C3 /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE7D2A0ACFFE004B28C3 /* EventDetailsView.swift */; };
+		8A95DE812A0B9708004B28C3 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE802A0B9708004B28C3 /* CapsuleButton.swift */; };
+		8A95DE832A0B99BB004B28C3 /* EventDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE822A0B99BB004B28C3 /* EventDetailsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		8A95DE742A0A5579004B28C3 /* EventPreviewMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventPreviewMock.json; sourceTree = "<group>"; };
 		8A95DE792A0A67A9004B28C3 /* EventsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsOverview.swift; sourceTree = "<group>"; };
 		8A95DE7B2A0A67D0004B28C3 /* EventsOverviewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsOverviewDataModel.swift; sourceTree = "<group>"; };
+		8A95DE7D2A0ACFFE004B28C3 /* EventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
+		8A95DE802A0B9708004B28C3 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
+		8A95DE822A0B99BB004B28C3 /* EventDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +205,7 @@
 				8A95DE3E2A07C9B3004B28C3 /* EventRowView.swift */,
 				8A95DE792A0A67A9004B28C3 /* EventsOverview.swift */,
 				8A95DE7B2A0A67D0004B28C3 /* EventsOverviewDataModel.swift */,
+				8A95DE7D2A0ACFFE004B28C3 /* EventDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +213,7 @@
 		8A95DE402A0A4206004B28C3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8A95DE7F2A0B96F0004B28C3 /* design */,
 				8A95DE652A0A4B94004B28C3 /* domain */,
 				8A95DE412A0A4213004B28C3 /* data */,
 			);
@@ -263,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				8A95DE552A0A4856004B28C3 /* EventRequest.swift */,
+				8A95DE822A0B99BB004B28C3 /* EventDetailsRequest.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -343,6 +352,14 @@
 				8A95DE722A0A5506004B28C3 /* TestDecodingEventPreview.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		8A95DE7F2A0B96F0004B28C3 /* design */ = {
+			isa = PBXGroup;
+			children = (
+				8A95DE802A0B9708004B28C3 /* CapsuleButton.swift */,
+			);
+			path = design;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,8 +501,10 @@
 			files = (
 				8A95DE7C2A0A67D0004B28C3 /* EventsOverviewDataModel.swift in Sources */,
 				8A910C562A05125D002E36D7 /* ContentView.swift in Sources */,
+				8A95DE812A0B9708004B28C3 /* CapsuleButton.swift in Sources */,
 				8A95DE6A2A0A4BCC004B28C3 /* EventPreview.swift in Sources */,
 				8A95DE442A0A422A004B28C3 /* RequestProtocol.swift in Sources */,
+				8A95DE7E2A0ACFFF004B28C3 /* EventDetailsView.swift in Sources */,
 				8A95DE522A0A465B004B28C3 /* DataParser.swift in Sources */,
 				8A95DE6C2A0A4BE5004B28C3 /* EventTicket.swift in Sources */,
 				8A95DE4D2A0A4605004B28C3 /* APIManager.swift in Sources */,
@@ -493,6 +512,7 @@
 				8A95DE462A0A42D4004B28C3 /* RequestType.swift in Sources */,
 				8A910C542A05125D002E36D7 /* BuyTicketsChallengeAppApp.swift in Sources */,
 				8A95DE482A0A44B9004B28C3 /* APIConstants.swift in Sources */,
+				8A95DE832A0B99BB004B28C3 /* EventDetailsRequest.swift in Sources */,
 				8A910C832A051497002E36D7 /* Coordinator.swift in Sources */,
 				8A95DE7A2A0A67A9004B28C3 /* EventsOverview.swift in Sources */,
 				8A95DE562A0A4856004B28C3 /* EventRequest.swift in Sources */,

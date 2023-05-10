@@ -29,7 +29,7 @@ struct EventsOverview: View {
                 viewModel.fetchEventsPreview()
             }
             .navigationDestination(for: EventPreview.self) { eventPreview in
-                Text(eventPreview.id!.description)
+                EventDetailsView(eventUuid: eventPreview.id!)
             }
             .navigationTitle("Events list")
             .navigationBarTitleDisplayMode(.inline)
