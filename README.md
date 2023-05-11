@@ -58,7 +58,7 @@ Documentation for API could be found in Postman collection in 'docs/EventsList.p
 
 ### Business logic tasks:
 [+] implement logic of filtering only upcoming events (events which are older than today do not show in the list)
-[ ] implement event details screen
+[+] implement event details screen
 
 ### Code refactoring tasks:
 [ ] Increase Code coverage of ListOverviewViewModel.swift to 80+% (check ListOverviewViewModelTests.swift)

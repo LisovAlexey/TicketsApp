@@ -5,73 +5,12 @@
 //  Created by Alexey Lisov on 09/05/2023.
 //
 
-import Foundation
 import SwiftUI
-
-
-class EventDetailsViewModel: ObservableObject {
-    
-    init (eventUuid: UUID,
-          requestManager: RequestManagerProtocol = RequestManager()) {
-        self.eventUuid = eventUuid
-        self.requestManager = requestManager
-    }
-    
-    let eventUuid: UUID
-    let requestManager: RequestManagerProtocol
-    @Published var event: Event?
-    @Published var wasBought: Bool = false
-    @Published var isLoading: Bool = true
-    
-    func fetchData() {
-        Task {
-            do {
-                let event: Event = try await requestManager.perform(EventsDetailsRequest.getEventByUUID(uuid: eventUuid))
-                
-                DispatchQueue.main.async { [weak self] in
-                    self?.event = event
-                    self?.isLoading = false
-                }
-            } catch {
-                print(error)
-                print("Request failed")
-            }
-        }
-    }
-    
-    func buyTicket() {
-        
-    }
-}
-
-
-struct Placeholder: ViewModifier {
-    
-    @State private var condition: Bool = false
-    func body(content: Content) -> some View {
-
-        content
-            .redacted(reason: .placeholder)
-            .opacity(condition ? 0.3 : 1.0)
-            .animation(.easeInOut(duration: 1)
-                       .repeatForever(autoreverses: true), value: condition)
-//                .animation(Animation
-//                    .easeInOut(duration: 1)
-//                    .repeatForever(autoreverses: true), value: condition)
-            .onAppear { condition = true }
-            .transition(.scale)
-        
-        
-    }
-}
 
 struct EventDetailsView: View {
     
-    init(eventUuid: UUID) {
-        self.viewModel = EventDetailsViewModel(eventUuid: eventUuid)
-    }
-    
-    @ObservedObject var viewModel: EventDetailsViewModel
+    @StateObject var viewModel: EventDetailsViewModel
+    @State var showTicket: Bool = false
     
     var event: Event {
         if viewModel.isLoading {
@@ -97,10 +36,15 @@ struct EventDetailsView: View {
             
             if !viewModel.wasBought {
                 buyButton
+            } else {
+                viewTicketButton
             }
         }
-        .onAppear {
-            viewModel.fetchData()
+        .task {
+            await viewModel.fetchData()
+        }
+        .sheet(isPresented: $showTicket) {
+            Text("Ticket")
         }
     }
     
@@ -160,12 +104,31 @@ struct EventDetailsView: View {
         .buttonStyle(CapsuleButton())
         .padding()
     }
+    
+    var viewTicketButton: some View {
+        Button {
+            showTicket = true
+        } label: {
+            Text("Show ticket")
+                .padding(.horizontal, 15)
+                .font(.title2)
+                .bold()
+        }
+        .buttonStyle(CapsuleButton())
+        .padding()
+    }
 }
 
 
 struct EventDetailsView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        EventDetailsView(eventUuid: UUID(uuidString: "9F1A13B2-76F5-4205-A0D4-15A975B53262")!)
+        
+        let uuid = UUID(uuidString: "9F1A13B2-76F5-4205-A0D4-15A975B53262")!
+        var viewModel = EventDetailsViewModel(eventUuid: uuid)
+        
+//        EventDetailsView(eventUuid: )
+        return EventDetailsView(viewModel: viewModel)
     }
 }
 

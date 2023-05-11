@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-extension DateFormatter {
-    static var defaultDateFormatter: DateFormatter {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMMM yyyy"
-        return dateFormatter
-    }
-}
 
 struct EventRowView: View {
     
@@ -33,6 +26,7 @@ struct EventRowView: View {
                     .foregroundColor(.init(white: 0.2))
                 
             }
+            
             Spacer()
             
             Text(String(format: "£%.01f", eventPreview.price))

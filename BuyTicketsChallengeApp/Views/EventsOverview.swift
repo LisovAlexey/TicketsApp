@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EventsOverview: View {
     
-    @ObservedObject var viewModel = EventsOverviewDataModel()
+    @StateObject var viewModel = EventsOverviewDataModel()
     
     @State var path = NavigationPath()
     
@@ -29,18 +29,13 @@ struct EventsOverview: View {
                 viewModel.fetchEventsPreview()
             }
             .navigationDestination(for: EventPreview.self) { eventPreview in
-                EventDetailsView(eventUuid: eventPreview.id!)
+//                EventDetailsView(eventUuid: eventPreview.id!)
+                EventDetailsView(viewModel: EventDetailsViewModel(eventUuid: eventPreview.id!))
+                
             }
             .navigationTitle("Events list")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                
-                Button {
-                    viewModel.filterPastEvents.toggle()
-                } label: {
-                    Image(systemName: "filter")
-                }
-
                 
                 Menu(content: {
                     Picker("Sorting by", selection: $viewModel.sorting, content: {
@@ -55,7 +50,7 @@ struct EventsOverview: View {
                     
                     Toggle("Filter past events", isOn: $viewModel.filterPastEvents)
                 }, label: {
-                    Image(systemName: "ellipsis.circle")
+                    Image(systemName: "line.horizontal.3.decrease.circle")
                 })
                 .padding(.horizontal, 10)
             }

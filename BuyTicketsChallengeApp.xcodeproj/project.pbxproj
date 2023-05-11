@@ -43,6 +43,9 @@
 		8A95DE7E2A0ACFFF004B28C3 /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE7D2A0ACFFE004B28C3 /* EventDetailsView.swift */; };
 		8A95DE812A0B9708004B28C3 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE802A0B9708004B28C3 /* CapsuleButton.swift */; };
 		8A95DE832A0B99BB004B28C3 /* EventDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE822A0B99BB004B28C3 /* EventDetailsRequest.swift */; };
+		8A95DE852A0BB2B7004B28C3 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE842A0BB2B7004B28C3 /* EventDetailsViewModel.swift */; };
+		8A95DE872A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE862A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift */; };
+		8A95DE8A2A0BB339004B28C3 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE892A0BB339004B28C3 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,9 @@
 		8A95DE7D2A0ACFFE004B28C3 /* EventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
 		8A95DE802A0B9708004B28C3 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
 		8A95DE822A0B99BB004B28C3 /* EventDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsRequest.swift; sourceTree = "<group>"; };
+		8A95DE842A0BB2B7004B28C3 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
+		8A95DE862A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderViewModifier.swift; sourceTree = "<group>"; };
+		8A95DE892A0BB339004B28C3 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +212,7 @@
 				8A95DE792A0A67A9004B28C3 /* EventsOverview.swift */,
 				8A95DE7B2A0A67D0004B28C3 /* EventsOverviewDataModel.swift */,
 				8A95DE7D2A0ACFFE004B28C3 /* EventDetailsView.swift */,
+				8A95DE842A0BB2B7004B28C3 /* EventDetailsViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +220,7 @@
 		8A95DE402A0A4206004B28C3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8A95DE882A0BB32D004B28C3 /* helpers */,
 				8A95DE7F2A0B96F0004B28C3 /* design */,
 				8A95DE652A0A4B94004B28C3 /* domain */,
 				8A95DE412A0A4213004B28C3 /* data */,
@@ -358,8 +366,17 @@
 			isa = PBXGroup;
 			children = (
 				8A95DE802A0B9708004B28C3 /* CapsuleButton.swift */,
+				8A95DE862A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift */,
 			);
 			path = design;
+			sourceTree = "<group>";
+		};
+		8A95DE882A0BB32D004B28C3 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A95DE892A0BB339004B28C3 /* DateFormatter.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,10 +517,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A95DE7C2A0A67D0004B28C3 /* EventsOverviewDataModel.swift in Sources */,
+				8A95DE872A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift in Sources */,
 				8A910C562A05125D002E36D7 /* ContentView.swift in Sources */,
 				8A95DE812A0B9708004B28C3 /* CapsuleButton.swift in Sources */,
 				8A95DE6A2A0A4BCC004B28C3 /* EventPreview.swift in Sources */,
 				8A95DE442A0A422A004B28C3 /* RequestProtocol.swift in Sources */,
+				8A95DE852A0BB2B7004B28C3 /* EventDetailsViewModel.swift in Sources */,
+				8A95DE8A2A0BB339004B28C3 /* DateFormatter.swift in Sources */,
 				8A95DE7E2A0ACFFF004B28C3 /* EventDetailsView.swift in Sources */,
 				8A95DE522A0A465B004B28C3 /* DataParser.swift in Sources */,
 				8A95DE6C2A0A4BE5004B28C3 /* EventTicket.swift in Sources */,

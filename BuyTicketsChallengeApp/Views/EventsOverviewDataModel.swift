@@ -9,8 +9,6 @@
 import SwiftUI
 
 
-
-
 class EventsOverviewDataModel: ObservableObject {
     
     enum SortingBy {
