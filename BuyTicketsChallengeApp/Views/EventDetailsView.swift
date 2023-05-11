@@ -10,10 +10,9 @@ import SwiftUI
 struct EventDetailsView: View {
     
     @StateObject var viewModel: EventDetailsViewModel
-    @State var showTicket: Bool = false
     
     var event: Event {
-        if viewModel.isLoading {
+        if viewModel.screenStatus == .screenLoading {
             return Event.mock
         } else {
             if let event = viewModel.event {
@@ -30,11 +29,11 @@ struct EventDetailsView: View {
         VStack {
             
             eventDetailsStack
-                .redacted(when: viewModel.isLoading)
+                .redacted(when: viewModel.screenStatus == .screenLoading)
             
             Spacer()
             
-            if !viewModel.wasBought {
+            if viewModel.screenStatus <= .ticketBuying {
                 buyButton
             } else {
                 viewTicketButton
@@ -43,7 +42,7 @@ struct EventDetailsView: View {
         .task {
             await viewModel.fetchData()
         }
-        .sheet(isPresented: $showTicket) {
+        .sheet(isPresented: $viewModel.showTicket) {
             Text("Ticket")
         }
     }
@@ -88,17 +87,31 @@ struct EventDetailsView: View {
         Button {
             viewModel.buyTicket()
         } label: {
-            HStack {
-                Text("Buy ticket:")
+            
+            if viewModel.screenStatus == .ticketBuying {
                 
-                Spacer()
+                HStack {
+                    Text(" ")
+                    ProgressView()
+                    Text(" ")
+                }
+                .bold()
+                .font(.title2)
                 
-                Text(String(format: "£%.01f", event.price))
-                    .bold()
-                
+            } else {
+                HStack {
+                    Text("Buy ticket:")
+                    
+                    Spacer()
+                    
+                    Text(String(format: "£%.01f", event.price))
+                        .bold()
+                    
+                }
+                .padding(.horizontal, 15).font(.title2)
+                .redacted(when: viewModel.screenStatus == .screenLoading)
             }
-            .padding(.horizontal, 15).font(.title2)
-            .redacted(when: viewModel.isLoading)
+            
 
         }
         .buttonStyle(CapsuleButton())
@@ -107,7 +120,7 @@ struct EventDetailsView: View {
     
     var viewTicketButton: some View {
         Button {
-            showTicket = true
+            viewModel.showTicket = true
         } label: {
             Text("Show ticket")
                 .padding(.horizontal, 15)

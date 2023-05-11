@@ -10,15 +10,23 @@ import Foundation
 
 enum EventsDetailsRequest: RequestProtocol {
     case getEventByUUID(uuid: UUID)
+    case buyTicketByUUID(uuid: UUID)
     
     var path: String {
         switch self {
         case .getEventByUUID(let uuid):
             return "/api/event/\(uuid)"
+        case .buyTicketByUUID(let uuid):
+            return "/api/event/\(uuid)/buy"
         }
     }
     
     var requestType: RequestType {
-        .GET
+        switch self {
+        case .getEventByUUID:
+            return .GET
+        case .buyTicketByUUID:
+            return .POST
+        }
     }
 }
