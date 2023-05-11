@@ -25,8 +25,8 @@ There are no special design, but there are some requirements for each screen whi
     + button to filter out outdated events
 - Event details screen should:
     + contain: title, event description, date of event, address, contact phone, buy button with price on it
-    - by tapping on buy button loading indicator should be shown
-    - after successful response navigate to ticket details screen
+    + by tapping on buy button loading indicator should be shown
+    + after successful response navigate to ticket details screen
     - in case ticket was bought already, buy button should be changed to "Open ticket", and by clicking on it ticket details should be opened without any request
 - Ticket details screen should:
     - contain: date of bought ticket, QR-verification code

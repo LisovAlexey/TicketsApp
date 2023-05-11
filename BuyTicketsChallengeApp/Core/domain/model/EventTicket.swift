@@ -10,6 +10,8 @@ import Foundation
 
 struct EventTicket: Decodable {
     
+    static var mock: EventTicket = EventTicket(qrCodeEncoding: "This is mock ticket", date: Date.now, eventId: UUID())
+    
     var id: UUID?
     
     var qrCodeEncoding: String

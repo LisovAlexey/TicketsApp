@@ -46,6 +46,7 @@
 		8A95DE852A0BB2B7004B28C3 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE842A0BB2B7004B28C3 /* EventDetailsViewModel.swift */; };
 		8A95DE872A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE862A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift */; };
 		8A95DE8A2A0BB339004B28C3 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE892A0BB339004B28C3 /* DateFormatter.swift */; };
+		8AA37E882A0D142B000642F1 /* TicketDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA37E872A0D142B000642F1 /* TicketDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		8A95DE842A0BB2B7004B28C3 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
 		8A95DE862A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderViewModifier.swift; sourceTree = "<group>"; };
 		8A95DE892A0BB339004B28C3 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		8AA37E872A0D142B000642F1 /* TicketDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				8A95DE7B2A0A67D0004B28C3 /* EventsOverviewDataModel.swift */,
 				8A95DE7D2A0ACFFE004B28C3 /* EventDetailsView.swift */,
 				8A95DE842A0BB2B7004B28C3 /* EventDetailsViewModel.swift */,
+				8AA37E872A0D142B000642F1 /* TicketDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				8A95DE4F2A0A4638004B28C3 /* RequestManager.swift in Sources */,
 				8A95DE4B2A0A45AC004B28C3 /* NetworkError.swift in Sources */,
 				8A95DE3F2A07C9B3004B28C3 /* EventRowView.swift in Sources */,
+				8AA37E882A0D142B000642F1 /* TicketDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

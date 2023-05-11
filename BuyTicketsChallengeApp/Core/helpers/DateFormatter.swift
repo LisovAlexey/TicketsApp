@@ -14,3 +14,17 @@ extension DateFormatter {
         return dateFormatter
     }
 }
+
+extension Date {
+    var formatAsDate: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        return dateFormatter.string(from: self)
+    }
+    
+    var formatAsDateAndTime: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM / HH:mm"
+        return dateFormatter.string(from: self)
+    }
+}

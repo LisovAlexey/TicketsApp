@@ -43,7 +43,10 @@ struct EventDetailsView: View {
             await viewModel.fetchData()
         }
         .sheet(isPresented: $viewModel.showTicket) {
-            Text("Ticket")
+            if let ticket = viewModel.eventTicket {
+                TicketDetailsView(ticket: ticket)
+            }
+            
         }
     }
     
