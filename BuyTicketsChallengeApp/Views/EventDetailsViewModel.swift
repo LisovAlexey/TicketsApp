@@ -25,20 +25,19 @@ class EventDetailsViewModel: ObservableObject {
     }
     
     init (eventUuid: UUID,
-          requestManager: RequestManagerProtocol = RequestManager()) {
+          requestManager: RequestManagerProtocol = RequestManager.shared) {
         self.eventUuid = eventUuid
         self.requestManager = requestManager
     }
     
     let eventUuid: UUID
     let requestManager: RequestManagerProtocol
+    let eventTicketsStorage: TicketsStorageProtocol = UserDefaultsTicketsStorage()
     
     @Published var eventTicket: EventTicket?
     @Published var showTicket: Bool = false
     
     @Published var event: Event?
-//    @Published var wasBought: Bool = false
-//    @Published var isLoading: Bool = true
     
     @Published var screenStatus: ScreenStatus = .screenLoading
     
@@ -49,8 +48,12 @@ class EventDetailsViewModel: ObservableObject {
             
             DispatchQueue.main.async { [unowned self] in
                 self.event = event
-//                self.isLoading = false
                 self.screenStatus = .loaded
+                
+                if let ticket = eventTicketsStorage.getTicket(by: eventUuid) {
+                    self.eventTicket = ticket
+                    self.screenStatus = .ticketBought
+                }
             }
         } catch {
             print(error)
@@ -61,21 +64,20 @@ class EventDetailsViewModel: ObservableObject {
     
     func buyTicket() {
         
-//        self.isLoadingTicket = true
         self.screenStatus = .ticketBuying
         
         Task {
             do {
                 
-                let ticket: EventTicket = try await requestManager.perform(EventsDetailsRequest.buyTicketByUUID(uuid: eventUuid))
+                let ticket: EventTicket = try await requestManager.perform(BuyTicketRequest.buyTicketByEventUUID(uuid: eventUuid))
                 
                 DispatchQueue.main.async { [unowned self] in
                     self.eventTicket = ticket
-//                    self.isLoadingTicket = false
-//                    self.wasBought = true
                     
                     self.screenStatus = .ticketBought
                     self.showTicket = true
+                    
+                    self.eventTicketsStorage.saveTicket(ticket: ticket)
                 }
             } catch {
                 print(error)

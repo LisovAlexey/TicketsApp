@@ -14,6 +14,7 @@ protocol RequestProtocol {
     var params: [String: Any] { get }
     var urlParams: [String: String?] { get }
     var addAuthorizationToken: Bool { get }
+    var cachePolicy: URLRequest.CachePolicy { get }
 }
 
 // MARK: - Default RequestProtocol
@@ -42,6 +43,10 @@ extension RequestProtocol {
         [:]
     }
     
+    var cachePolicy: URLRequest.CachePolicy {
+        .returnCacheDataElseLoad
+    }
+    
     func createURLRequest(authToken: String) throws -> URLRequest {
         var components = URLComponents()
         components.scheme = "http"
@@ -55,7 +60,7 @@ extension RequestProtocol {
         
         guard let url = components.url else { throw  NetworkError.invalidURL }
         
-        var urlRequest = URLRequest(url: url)
+        var urlRequest = URLRequest(url: url, cachePolicy: cachePolicy)
         urlRequest.httpMethod = requestType.rawValue
         
         if !headers.isEmpty {

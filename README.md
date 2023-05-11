@@ -23,13 +23,13 @@ There are no special design, but there are some requirements for each screen whi
     + should contain pull-down to refresh gesture to reload the data
     + buttons for sorting by date/price
     + button to filter out outdated events
-- Event details screen should:
++ Event details screen should:
     + contain: title, event description, date of event, address, contact phone, buy button with price on it
     + by tapping on buy button loading indicator should be shown
     + after successful response navigate to ticket details screen
-    - in case ticket was bought already, buy button should be changed to "Open ticket", and by clicking on it ticket details should be opened without any request
-- Ticket details screen should:
-    - contain: date of bought ticket, QR-verification code
+    + in case ticket was bought already, buy button should be changed to "Open ticket", and by clicking on it ticket details should be opened without any request
++ Ticket details screen should:
+    + contain: date of bought ticket, QR-verification code
 
 
 # Dependencies
@@ -66,8 +66,8 @@ Documentation for API could be found in Postman collection in 'docs/EventsList.p
 ## Round 3 (You are the best!)
 
 ### Business logic tasks:
-[ ] implement buying logic
-[ ] implement ticket details screen
+[+] implement buying logic
+[+] implement ticket details screen
 
 ### Code refactoring tasks:
 [ ]  add tests for AppCoordinator using Mocks instead of real VC and VM

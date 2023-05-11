@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct EventTicket: Decodable {
+struct EventTicket: Codable {
     
     static var mock: EventTicket = EventTicket(qrCodeEncoding: "This is mock ticket", date: Date.now, eventId: UUID())
     

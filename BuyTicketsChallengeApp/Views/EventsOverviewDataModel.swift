@@ -37,7 +37,7 @@ class EventsOverviewDataModel: ObservableObject {
     @Published var eventPreviews: [EventPreview]
     
     let requestManager: RequestManagerProtocol
-    init(requestManager: RequestManagerProtocol = RequestManager()) {
+    init(requestManager: RequestManagerProtocol = RequestManager.shared) {
         self.requestManager = requestManager
         self.allEventPreviews = []
         self.eventPreviews = []

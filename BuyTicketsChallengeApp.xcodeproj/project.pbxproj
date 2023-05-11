@@ -47,6 +47,9 @@
 		8A95DE872A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE862A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift */; };
 		8A95DE8A2A0BB339004B28C3 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95DE892A0BB339004B28C3 /* DateFormatter.swift */; };
 		8AA37E882A0D142B000642F1 /* TicketDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA37E872A0D142B000642F1 /* TicketDetailsView.swift */; };
+		8AA37E8B2A0D2E7B000642F1 /* TicketsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA37E8A2A0D2E7B000642F1 /* TicketsStorage.swift */; };
+		8AA37E8D2A0D3051000642F1 /* DataCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA37E8C2A0D3051000642F1 /* DataCoder.swift */; };
+		8AA37E8F2A0D3E35000642F1 /* BuyTicketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA37E8E2A0D3E35000642F1 /* BuyTicketRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +111,9 @@
 		8A95DE862A0BB2F0004B28C3 /* PlaceHolderViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderViewModifier.swift; sourceTree = "<group>"; };
 		8A95DE892A0BB339004B28C3 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		8AA37E872A0D142B000642F1 /* TicketDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailsView.swift; sourceTree = "<group>"; };
+		8AA37E8A2A0D2E7B000642F1 /* TicketsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsStorage.swift; sourceTree = "<group>"; };
+		8AA37E8C2A0D3051000642F1 /* DataCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoder.swift; sourceTree = "<group>"; };
+		8AA37E8E2A0D3E35000642F1 /* BuyTicketRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +229,7 @@
 		8A95DE402A0A4206004B28C3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8AA37E892A0D2E55000642F1 /* storage */,
 				8A95DE882A0BB32D004B28C3 /* helpers */,
 				8A95DE7F2A0B96F0004B28C3 /* design */,
 				8A95DE652A0A4B94004B28C3 /* domain */,
@@ -235,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				8A95DE422A0A421A004B28C3 /* api */,
-				8A95DE472A0A44B9004B28C3 /* APIConstants.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 		8A95DE422A0A421A004B28C3 /* api */ = {
 			isa = PBXGroup;
 			children = (
+				8A95DE472A0A44B9004B28C3 /* APIConstants.swift */,
 				8A95DE532A0A482F004B28C3 /* request */,
 				8A95DE492A0A459F004B28C3 /* network */,
 				8A95DE502A0A464E004B28C3 /* parser */,
@@ -283,6 +290,7 @@
 			children = (
 				8A95DE552A0A4856004B28C3 /* EventRequest.swift */,
 				8A95DE822A0B99BB004B28C3 /* EventDetailsRequest.swift */,
+				8AA37E8E2A0D3E35000642F1 /* BuyTicketRequest.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -380,6 +388,15 @@
 				8A95DE892A0BB339004B28C3 /* DateFormatter.swift */,
 			);
 			path = helpers;
+			sourceTree = "<group>";
+		};
+		8AA37E892A0D2E55000642F1 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				8AA37E8A2A0D2E7B000642F1 /* TicketsStorage.swift */,
+				8AA37E8C2A0D3051000642F1 /* DataCoder.swift */,
+			);
+			path = storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,6 +542,7 @@
 				8A95DE812A0B9708004B28C3 /* CapsuleButton.swift in Sources */,
 				8A95DE6A2A0A4BCC004B28C3 /* EventPreview.swift in Sources */,
 				8A95DE442A0A422A004B28C3 /* RequestProtocol.swift in Sources */,
+				8AA37E8F2A0D3E35000642F1 /* BuyTicketRequest.swift in Sources */,
 				8A95DE852A0BB2B7004B28C3 /* EventDetailsViewModel.swift in Sources */,
 				8A95DE8A2A0BB339004B28C3 /* DateFormatter.swift in Sources */,
 				8A95DE7E2A0ACFFF004B28C3 /* EventDetailsView.swift in Sources */,
@@ -540,7 +558,9 @@
 				8A95DE7A2A0A67A9004B28C3 /* EventsOverview.swift in Sources */,
 				8A95DE562A0A4856004B28C3 /* EventRequest.swift in Sources */,
 				8A95DE4F2A0A4638004B28C3 /* RequestManager.swift in Sources */,
+				8AA37E8B2A0D2E7B000642F1 /* TicketsStorage.swift in Sources */,
 				8A95DE4B2A0A45AC004B28C3 /* NetworkError.swift in Sources */,
+				8AA37E8D2A0D3051000642F1 /* DataCoder.swift in Sources */,
 				8A95DE3F2A07C9B3004B28C3 /* EventRowView.swift in Sources */,
 				8AA37E882A0D142B000642F1 /* TicketDetailsView.swift in Sources */,
 			);

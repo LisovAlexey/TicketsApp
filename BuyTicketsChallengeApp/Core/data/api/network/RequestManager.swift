@@ -13,6 +13,9 @@ protocol RequestManagerProtocol {
 
 
 final class RequestManager: RequestManagerProtocol {
+    
+    static let shared = RequestManager()
+    
     let apiManager: APIManagerProtocol
     let parser: DataParserProtocol
     

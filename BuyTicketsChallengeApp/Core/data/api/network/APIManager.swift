@@ -16,7 +16,11 @@ class APIManager: APIManagerProtocol {
     private let urlSession: URLSession
     
     init(urlSession: URLSession = URLSession.shared) {
+        
+        let cache = URLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 10 * 1024 * 1024, diskPath: "BuyTicketsCacheDirectory")
+        
         self.urlSession = urlSession
+        self.urlSession.configuration.urlCache = cache
     }
     
     func perform(_ request: RequestProtocol, authToken: String = "") async throws -> Data {
