@@ -166,6 +166,7 @@
 		8A910C522A05125D002E36D7 /* BuyTicketsChallengeApp */ = {
 			isa = PBXGroup;
 			children = (
+				8AEE22182A0E555000E4263E /* New Group */,
 				8A95DE5D2A0A4962004B28C3 /* PreviewContent */,
 				8A95DE402A0A4206004B28C3 /* Core */,
 				8A95DE3D2A07C990004B28C3 /* Views */,
@@ -216,12 +217,8 @@
 		8A95DE3D2A07C990004B28C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8A95DE3E2A07C9B3004B28C3 /* EventRowView.swift */,
-				8A95DE792A0A67A9004B28C3 /* EventsOverview.swift */,
-				8A95DE7B2A0A67D0004B28C3 /* EventsOverviewDataModel.swift */,
-				8A95DE7D2A0ACFFE004B28C3 /* EventDetailsView.swift */,
-				8A95DE842A0BB2B7004B28C3 /* EventDetailsViewModel.swift */,
-				8AA37E872A0D142B000642F1 /* TicketDetailsView.swift */,
+				8AEE221A2A0E558100E4263E /* EventDetailsView */,
+				8AEE22192A0E555B00E4263E /* EventsOverview */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -399,6 +396,33 @@
 			path = storage;
 			sourceTree = "<group>";
 		};
+		8AEE22182A0E555000E4263E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		8AEE22192A0E555B00E4263E /* EventsOverview */ = {
+			isa = PBXGroup;
+			children = (
+				8A95DE3E2A07C9B3004B28C3 /* EventRowView.swift */,
+				8A95DE792A0A67A9004B28C3 /* EventsOverview.swift */,
+				8A95DE7B2A0A67D0004B28C3 /* EventsOverviewDataModel.swift */,
+			);
+			path = EventsOverview;
+			sourceTree = "<group>";
+		};
+		8AEE221A2A0E558100E4263E /* EventDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				8A95DE7D2A0ACFFE004B28C3 /* EventDetailsView.swift */,
+				8A95DE842A0BB2B7004B28C3 /* EventDetailsViewModel.swift */,
+				8AA37E872A0D142B000642F1 /* TicketDetailsView.swift */,
+			);
+			path = EventDetailsView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,12 +433,15 @@
 				8A910C4C2A05125D002E36D7 /* Sources */,
 				8A910C4D2A05125D002E36D7 /* Frameworks */,
 				8A910C4E2A05125D002E36D7 /* Resources */,
+				8A81931C2A1E5347009C2C07 /* Run Linter Checks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = BuyTicketsChallengeApp;
+			packageProductDependencies = (
+			);
 			productName = BuyTicketsChallengeApp;
 			productReference = 8A910C502A05125D002E36D7 /* BuyTicketsChallengeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -487,6 +514,8 @@
 				Base,
 			);
 			mainGroup = 8A910C472A05125D002E36D7;
+			packageReferences = (
+			);
 			productRefGroup = 8A910C512A05125D002E36D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -530,6 +559,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8A81931C2A1E5347009C2C07 /* Run Linter Checks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Linter Checks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A910C4C2A05125D002E36D7 /* Sources */ = {
